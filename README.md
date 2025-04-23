@@ -20,11 +20,39 @@
 
 ## 🖼️ 输出示例
 
+> ### 表格检测结果
+>
+> 表格检测将原始图像与检测到的表格结构叠加显示，绿色线条代表水平线，蓝色线条代表垂直线，红色点代表交叉点。系统通过HSV颜色空间过滤红色内容，使用形态学操作检测表格线条，并通过交叉点分析重建表格结构。
+>
+> <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center">
+>   <img src="https://github.com/user-attachments/assets/6ef74dca-6417-48fd-a429-83f8620ee05d" width="30%" alt="表格检测示例1">
+>   <img src="https://github.com/user-attachments/assets/720d7a76-32d6-4051-990d-131fbbfa60f7" width="30%" alt="表格检测示例2">
+>   <img src="https://github.com/user-attachments/assets/196e19c1-ee62-494a-a02e-32f4a5a03941" width="30%" alt="表格检测示例3">
+> </div>
+>
+> <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:15px">
+>   <img src="https://github.com/user-attachments/assets/f2e6ac97-6a72-40e5-97d9-80f3cf16738b" width="30%" alt="表格检测示例4">
+>   <img src="https://github.com/user-attachments/assets/d4f3704d-35bc-4554-817c-9e44f37a32c9" width="30%" alt="表格检测示例5">
+>   <img src="https://github.com/user-attachments/assets/a6558748-4e65-4044-85e8-8f038fcd8de7" width="30%" alt="表格检测示例6">
+> </div>
 
+---
+
+> ### 表格框架提取结果
+>
+> 框架提取结果清晰地显示表格结构，高亮显示线条交叉点，便于后续数据提取和分析。系统可以处理各种复杂的表格布局，包括具有多级表头、合并单元格的表格结构，同时有效过滤噪声和非表格线条。
+>
+> <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center">
+>   <img src="https://github.com/user-attachments/assets/4dce3269-2ec6-465e-98f4-8c103fa87ccb" width="30%" alt="框架提取示例1">
+>   <img src="https://github.com/user-attachments/assets/f38557f9-e1fd-4cbc-a34f-b1656f7eb60e" width="30%" alt="框架提取示例2">
+>   <img src="https://github.com/user-attachments/assets/14146be1-fa45-4eb3-b6d1-187f71d1b908" width="30%" alt="框架提取示例3">
+> </div>
+
+---
 
 ## 🔧 环境要求
 
-- Python 3.6+
+- Python 3.8+
 - OpenCV (cv2)
 - NumPy
 - 其他标准库: os, shutil, pathlib, concurrent.futures, logging, datetime
